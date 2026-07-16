@@ -37,6 +37,12 @@ RARITY_ORDER = {
     "Common": 5
 }
 
+PACK_ORDER = {
+    "Legacy": 0,
+    "Hail Mary": 1,
+    "Agent Archives": 2
+}
+
 # 2. Build the CSS styles (Notice the new '.binder-row' class to align them)
 html_content = """
 <style>
@@ -193,6 +199,7 @@ if username:
                         "card_id": card_info["id"],
                         "name": card_info["name"],
                         "rarity": card_info["rarity"],
+                        "pack": card_info["pack"],
                         "num": card_info["card_num"],
                         "amount": item["Amount"]
                     })
@@ -202,13 +209,13 @@ if username:
                     options=["Default (Release Order)","Rarity (High to Low)", "Rarity (Low to High)"]
                 )
 
-                user_inventory.sort(key=lambda x: x["num"])
+                user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), x["num"])
 
                 if sort_option == "Rarity (High to Low)":
-                    user_inventory.sort(key=lambda x:RARITY_ORDER.get(x["rarity"], 99))
+                    user_inventory.sort(key=lambda x (get_pack_order(x["pack"]), RARITY_ORDER.get(x["rarity"], 99))
 
                 elif sort_option == "Rarity (Low to High)":
-                    user_inventory.sort(key=lambda x:RARITY_ORDER.get(x["rarity"], 99), reverse=True)
+                    user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), RARITY_ORDER.get(x["rarity"], 99), reverse=True)
 
                 for card in user_inventory:
                     cid = str(card['card_id'])
