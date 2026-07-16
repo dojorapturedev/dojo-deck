@@ -43,6 +43,8 @@ PACK_ORDER = {
     "Agent Archives": 2
 }
 
+def get_pack_order(pack_name):
+    return PACK_ORDER.get(pack_name, 99)
 # 2. Build the CSS styles (Notice the new '.binder-row' class to align them)
 html_content = """
 <style>
