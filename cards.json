@@ -278,5 +278,130 @@
     "name": "Graceful Destruction",
     "front": "app/static/hm/graceful_destruction_front.png",
     "back": "app/static/hm/graceful_destruction_back.png"
+  },
+  "f967d38c-7331-442f-b405-6524730294d6": {
+    "name": "FMIYWT",
+    "front": "app/static/agents/fmiywt.png",
+    "back": "app/static/agents/fmiywt.png"
+  },
+  "1773b2f7-74bc-476c-9641-1c15bbe2a3fa": {
+    "name": "Homecoming Beatdown",
+    "front": "app/static/agents/homecoming_beatdown.png",
+    "back": "app/static/agents/homecoming_beatdown.png"
+  },
+  "1541a578-3bf6-4635-8ef7-d08a2e2e4c91": {
+    "name": "Tytoking",
+    "front": "app/static/agents/tytoking.png",
+    "back": "app/static/agents/tytoking.png"
+  },
+  "31b0df19-ebce-4b60-a437-fe527c7363c2": {
+    "name": "Bounties and Bodies",
+    "front": "app/static/agents/bounties_and_bodies.png",
+    "back": "app/static/agents/bounties_and_bodies.png"
+  },
+  "00d32b52-3944-429e-9238-2e403c5010f2": {
+    "name": "Briple Bhreat",
+    "front": "app/static/agents/briple_bhreat.png",
+    "back": "app/static/agents/briple_bhreat.png"
+  },
+  "e7cab614-da21-47e1-9cd4-d3ae27dfa4ca": {
+    "name": "LeeAnn's Login",
+    "front": "app/static/agents/leeann_login.png",
+    "back": "app/static/agents/leeann_login.png"
+  },
+  "fb9d41ab-7250-4420-959a-ec16d50c3df1": {
+    "name": "Agent Henno's Message",
+    "front": "app/static/agents/agent_henno_message.png",
+    "back": "app/static/agents/agent_henno_message.png"
+  },
+  "47790959-499b-4964-8233-15faf1acf300": {
+    "name": "Security vs Mortals",
+    "front": "app/static/agents/security_vs_mortals.png",
+    "back": "app/static/agents/security_vs_mortals.png"
+  },
+  "32b4be12-f233-4940-8633-17700c989727": {
+    "name": "Hijacking the Temple",
+    "front": "app/static/agents/hijacking_the_temple.png",
+    "back": "app/static/agents/hijacking_the_temple.png"
+  },
+  "113ff8d5-73bc-4a4e-8595-f0bd07986784": {
+    "name": "Bagley's Blessing",
+    "front": "app/static/agents/bagley_blessing.png",
+    "back": "app/static/agents/bagley_blessing.png"
+  },
+  "a58d7293-c13c-42e2-838b-32cf320b4e32": {
+    "name": "Lord Yelgab",
+    "front": "app/static/agents/lord_yelgab.png",
+    "back": "app/static/agents/lord_yelgab.png"
+  },
+  "62698f7f-7245-47a3-aba5-a1ff0e5d4622": {
+    "name": "Best Bot",
+    "front": "app/static/agents/best_bot.png",
+    "back": "app/static/agents/best_bot.png"
+  },
+  "ce140e4e-8873-4a42-af67-217c5e003e86": {
+    "name": "Jean's Jumper at the Buzzer",
+    "front": "app/static/agents/jean_jumper_at_the_buzzer.png",
+    "back": "app/static/agents/jean_jumper_at_the_buzzer.png"
+  },
+  "9da0240c-437f-42e2-bd2f-ccdbd0346e85": {
+    "name": "Agent Alert Apprehension",
+    "front": "app/static/agents/agent_alert_apprehension.png",
+    "back": "app/static/agents/agent_alert_apprehension.png"
+  },
+  "2024d302-caa0-4880-83e6-29c74b01c92e": {
+    "name": "Big Ass Rocket",
+    "front": "app/static/agents/big_ass_rocket.png",
+    "back": "app/static/agents/big_ass_rocket.png"
+  },
+  "c85de6b9-1ad2-4351-a153-b752089ac666": {
+    "name": "The OGs",
+    "front": "app/static/agents/the_ogs.png",
+    "back": "app/static/agents/the_ogs.png"
+  },
+  "11a70966-8677-4232-9f4c-b4fe0104625b": {
+    "name": "J&J Services",
+    "front": "app/static/agents/j&j_services.png",
+    "back": "app/static/agents/j&j_services.png"
+  },
+  "30513e1d-e8ca-4dd1-9344-f2660499d8aa": {
+    "name": "Darkside Deceit",
+    "front": "app/static/agents/darkside_deceit.png",
+    "back": "app/static/agents/darkside_deceit.png"
+  },
+  "e9d72fa1-58f1-4066-8fba-9b59c0106abb": {
+    "name": "PR Decimation",
+    "front": "app/static/agents/pr_decimation.png",
+    "back": "app/static/agents/pr_decimation.png"
+  },
+  "94c21f12-fd13-468e-b68b-39407ede4af7": {
+    "name": "Demon God Destruction",
+    "front": "app/static/agents/demon_god_destruction.png",
+    "back": "app/static/agents/demon_god_destruction.png"
+  },
+  "07f794fb-6bc7-4928-b69c-31b7fee4e393": {
+    "name": "Joe Joe Lost His Mojo",
+    "front": "app/static/agents/joe_joe_lost_his_mojo.png",
+    "back": "app/static/agents/joe_joe_lost_his_mojo.png"
+  },
+  "2d348c3b-a681-4cc3-a55b-b0ccef533903": {
+    "name": "Security Takeover",
+    "front": "app/static/agents/security_takeover.png",
+    "back": "app/static/agents/security_takeover.png"
+  },
+  "637ceace-c2fc-41ec-b8b5-f94e45e4b17f": {
+    "name": "Dark Betrayal",
+    "front": "app/static/agents/dark_betrayal.png",
+    "back": "app/static/agents/dark_betrayal.png"
+  },
+  "9c23c487-6174-4270-bf87-e9a66d73607f": {
+    "name": "Riven's Rumble",
+    "front": "app/static/agents/riven_rumble.png",
+    "back": "app/static/agents/riven_rumble.png"
+  },
+  "369d1608-5371-41b1-b77f-ed6dbef0d450": {
+    "name": "Skorn's Surprise",
+    "front": "app/static/agents/skorn_surprise.png",
+    "back": "app/static/agents/skorn_surprise.png"
   }
 }
