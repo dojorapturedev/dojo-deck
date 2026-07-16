@@ -165,7 +165,7 @@ html_content = """
     position: absolute;
     bottom: -10px;
     right: -10px;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Vivid Gamer Red Gradient */
+    background: linear-gradient(135deg, #f12711, #f5af19); /* Vivid Gamer Red Gradient */
     color: white;
     font-family: 'Arial Black', sans-serif;
     font-size: 14px;
