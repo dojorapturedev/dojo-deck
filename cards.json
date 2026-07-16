@@ -1,27 +1,282 @@
 {
-  "4675a851-b8dc-493c-b069-d14f422d09e5": {
-    "name": "Serenity Surge",
-    "front": "app/static/serenity_surge_front.png",
-    "back": "app/static/serenity_surge_back.png"
+  "937e606f-3214-4dfc-9d07-389746487bc1": {
+    "name": "The King of Thunder",
+    "front": "app/static/legacy/the_king_of_thunder.png",
+    "back": "app/static/legacy/the_king_of_thunder.png"
   },
-  "31df7265-69d3-42e2-9ac8-271331e13bb3": {
-    "name": "Graceful Resurrection",
-    "front": "app/static/graceful_resurrection_front.png",
-    "back": "app/static/graceful_resurrection_back.png"
+  "6c7eed4a-231a-4626-b928-f2cee6d333ff": {
+    "name": "Khay's Natural Gifts",
+    "front": "app/static/legacy/khay_natural_gifts.png",
+    "back": "app/static/legacy/khay_natural_gifts.png"
   },
-  "a1a92042-8b2d-401a-8014-5ce8699ae365": {
-    "name": "Graceful Destruction",
-    "front": "app/static/graceful_destruction_front.png",
-    "back": "app/static/graceful_destruction_back.png"
+  "e3bcc8df-6645-407a-b46d-0a342ca12380": {
+    "name": "Prime Time",
+    "front": "app/static/legacy/prime_time.png",
+    "back": "app/static/legacy/prime_time.png"
   },
-  "74d8a790-9661-4b3a-86df-c2ec4ad2ae1f": {
-    "name": "1st Witness",
-    "front": "app/static/1st_witness_front.png",
-    "back": "app/static/1st_witness_back.png"
+  "cab139ab-4222-489a-9c99-7261aeae2c78": {
+    "name": "Orien's Oracle",
+    "front": "app/static/legacy/orien_oracle.png",
+    "back": "app/static/legacy/orien_oracle.png"
+  },
+  "da02218a-8ed8-4697-944d-232b14b10b1e": {
+    "name": "Vader's Vengeance",
+    "front": "app/static/legacy/vader_vengeance.png",
+    "back": "app/static/legacy/vader_vengeance.png"
+  },
+  "833e3588-be65-44c9-9fca-31c02a594cba": {
+    "name": "Geno's Pearly Gates",
+    "front": "app/static/legacy/hm/geno_pearly_gates.png",
+    "back": "app/static/legacy/hm/geno_pearly_gates.png"
+  },
+  "1eaa0703-a977-4071-bf84-1de2c78cd008": {
+    "name": "Jasmine's Judgement",
+    "front": "app/static/legacy/jasmine_judgement.png",
+    "back": "app/static/legacy/jasmine_judgement.png"
+  },
+  "30e32d8b-8e49-46a0-8085-1df514156365": {
+    "name": "LeeAnn The Mortal",
+    "front": "app/static/legacy/leeann_the_mortal.png",
+    "back": "app/static/legacy/leeann_the_mortal.png"
+  },
+  "61ba8944-bfdf-4adc-b80e-a44468550c64": {
+    "name": "Jean The Vanquisher",
+    "front": "app/static/legacy/jean_the_vanquisher.png",
+    "back": "app/static/legacy/jean_the_vanquisher.png"
+  },
+  "dd956f5a-e525-4881-8b3c-534d9873a85c": {
+    "name": "Headless HorsEman",
+    "front": "app/static/legacy/headless_horseman.png",
+    "back": "app/static/legacy/headless_horseman.png"
+  },
+  "ee935e21-3c94-4d22-b4ca-f7706a090e17": {
+    "name": "For The Phamily",
+    "front": "app/static/legacy/for_the_phamily.png",
+    "back": "app/static/legacy/for_the_phamily.png"
+  },
+  "2e2b95eb-32b4-4b87-9d51-3807a7cdbcfb": {
+    "name": "Gimmik's Genesis",
+    "front": "app/static/legacy/gimmik_genesis.png",
+    "back": "app/static/legacy/gimmik_genesis.png"
+  },
+  "da9dfda9-ba98-415e-acc4-cad8494428aa": {
+    "name": "Jin The Reaper",
+    "front": "app/static/legacy/jin_the_reaper.png",
+    "back": "app/static/legacy/jin_the_reaper.png"
+  },
+  "918f3e7e-d7bd-4bec-9671-4de3f9da8236": {
+    "name": "Queen's Quest",
+    "front": "app/static/legacy/queen_quest.png",
+    "back": "app/static/legacy/queen_quest.png"
+  },
+  "669f3990-b9d9-4f1f-8847-aba8a7614aad": {
+    "name": "Heart of The Wu",
+    "front": "app/static/legacy/heart_of_the_wu.png",
+    "back": "app/static/legacy/heart_of_the_wu.png"
+  },
+  "a74fdb0c-6493-422c-af09-fce09dec3a3e": {
+    "name": "Leofu's Legend",
+    "front": "app/static/legacy/leofu_legend.png",
+    "back": "app/static/legacy/leofu_legend.png"
+  },
+  "f148083e-83d5-4339-9a40-a06c821ca811": {
+    "name": "Mott Muscle",
+    "front": "app/static/legacy/mott_muscle.png",
+    "back": "app/static/legacy/mott_muscle.png"
+  },
+  "5988c454-8fc9-41d1-a902-bc6d014329d6": {
+    "name": "Keep Rollin",
+    "front": "app/static/legacy/keep_rollin.png",
+    "back": "app/static/legacy/keep_rollin.png"
+  },
+  "71a74487-a2b8-4781-8f0e-c2a528dce309": {
+    "name": "Astro Omega",
+    "front": "app/static/legacy/astro_omega.png",
+    "back": "app/static/legacy/astro_omega.png"
+  },
+  "809db06d-4e18-4129-83a2-e6badd2d63f7": {
+    "name": "Defense Division",
+    "front": "app/static/legacy/defense_division.png",
+    "back": "app/static/legacy/defense_division.png"
+  },
+  "7963d474-5d28-472f-9a38-3de05ac231d7": {
+    "name": "Pusha's Plan",
+    "front": "app/static/legacy/pusha_plan.png",
+    "back": "app/static/legacy/pusha_plan.png"
+  },
+  "76f5797e-b8e3-4ff4-a219-7d7b44121963": {
+    "name": "Mighty Demise",
+    "front": "app/static/legacy/mighty_demise.png",
+    "back": "app/static/legacy/mighty_demise.png"
+  },
+  "308c8d47-05bd-479e-81fa-39a749e46750": {
+    "name": "The 1st Lady",
+    "front": "app/static/legacy/the_1st_lady.png",
+    "back": "app/static/legacy/the_1st_lady.png"
+  },
+  "181c80d0-ee09-4ecd-9ed2-84464eb29edb": {
+    "name": "Award Winning",
+    "front": "app/static/legacy/award_winning.png",
+    "back": "app/static/legacy/award_winning.png"
+  },
+  "9cce6522-aada-4ce3-80c9-2fb164f42329": {
+    "name": "Nomu",
+    "front": "app/static/legacy/nomu.png",
+    "back": "app/static/legacy/nomu.png"
+  },
+  "8784e46d-23f2-4734-8140-3802ca56c02d": {
+    "name": "Brotha of Destruction",
+    "front": "app/static/legacy/brotha_of_destruction.png",
+    "back": "app/static/legacy/brotha_of_destruction.png"
+  },
+  "4febd1e6-9938-4325-a4f4-e0ce9f9faa6d": {
+    "name": "Joe Swanson",
+    "front": "app/static/legacy/joe_swanson.png",
+    "back": "app/static/legacy/joe_swanson.png"
+  },
+  "908114d0-ddb4-49e1-8d9a-a60061188037": {
+    "name": "Eustace",
+    "front": "app/static/legacy/eustace.png",
+    "back": "app/static/legacy/eustace.png"
+  },
+  "777a4fed-7785-40b0-955b-0bc0ebb8ccf1": {
+    "name": "1st Form Cell",
+    "front": "app/static/legacy/1st_form_cell.png",
+    "back": "app/static/legacy/1st_form_cell.png"
+  },
+  "30d9c874-e551-4ef3-bf3f-c3e793fc38ec": {
+    "name": "Pegasus",
+    "front": "app/static/legacy/pegasus.png",
+    "back": "app/static/legacy/pegasus.png"
+  },
+  "b834b9f8-3e2b-47e7-b814-2bbdce9e9713": {
+    "name": "Jafar",
+    "front": "app/static/legacy/jafar.png",
+    "back": "app/static/legacy/jafar.png"
+  },
+  "0c95171c-a17b-41b7-9944-935409e2cc38": {
+    "name": "UI Shaggy",
+    "front": "app/static/legacy/ui_shaggy.png",
+    "back": "app/static/legacy/ui_shaggy.png"
+  },
+  "10f27a09-5bed-465b-8211-1df4dd9fb6a4": {
+    "name": "King Mickey",
+    "front": "app/static/legacy/king_mickey.png",
+    "back": "app/static/legacy/king_mickey.png"
+  },
+  "4b67e728-68f9-410c-b788-69dffe7a7f4e": {
+    "name": "Ganondorf",
+    "front": "app/static/legacy/ganondorf.png",
+    "back": "app/static/legacy/ganondorf.png"
+  },
+  "625c88cc-8f58-49ef-9df0-a05d229009fb": {
+    "name": "Poogly's Passion",
+    "front": "app/static/legacy/poogly_passion.png",
+    "back": "app/static/legacy/poogly_passion.png"
+  },
+  "9f3c0afb-c7fd-4eef-8687-d7478a25808f": {
+    "name": "Cover Me",
+    "front": "app/static/legacy/cover_me.png",
+    "back": "app/static/legacy/cover_me.png"
+  },
+  "603795da-473d-4d8b-acc7-9c4b6ae2421c": {
+    "name": "Crossover Creator",
+    "front": "app/static/legacy/crossover_creator.png",
+    "back": "app/static/legacy/crossover_creator.png"
+  },
+  "cf750bdd-06c0-42d2-a86b-9bc8a80cd745": {
+    "name": "The Last Stand",
+    "front": "app/static/legacy/the_last_stand.png",
+    "back": "app/static/legacy/the_last_stand.png"
+  },
+  "56e840f2-5159-44e1-8d0f-412a3ce7eb02": {
+    "name": "The Maple Man",
+    "front": "app/static/legacy/the_maple_man.png",
+    "back": "app/static/legacy/the_maple_man.png"
+  },
+  "168f7c68-fcf4-4bde-aab2-109fc4a478d6": {
+    "name": "Monk of The Year",
+    "front": "app/static/legacy/monk_of_the_year.png",
+    "back": "app/static/legacy/monk_of_the_year.png"
+  },
+  "595c8543-8dd9-4e43-875e-a6ed7b5d19e8": {
+    "name": "Ground Zero",
+    "front": "app/static/legacy/ground_zero.png",
+    "back": "app/static/legacy/ground_zero.png"
+  },
+  "882d79d5-d489-4179-9178-10ba3750ad0c": {
+    "name": "Gimmik's Curse",
+    "front": "app/static/legacy/gimmik_curse.png",
+    "back": "app/static/legacy/gimmik_curse.png"
+  },
+  "9151d583-95a5-4086-ba0e-8efa6d9a3675": {
+    "name": "Kung Fu Kermit",
+    "front": "app/static/legacy/kung_fu_kermit.png",
+    "back": "app/static/legacy/kung_fu_kermit.png"
+  },
+  "f5476eee-79eb-45ab-9ccf-e6310c5b11fc": {
+    "name": "The Rebirth",
+    "front": "app/static/legacy/the_rebirth.png",
+    "back": "app/static/legacy/the_rebirth.png"
+  },
+  "013aa240-ec2d-45e0-b25f-52f66afb04ab": {
+    "name": "The Civil War",
+    "front": "app/static/legacy/the_civil_war.png",
+    "back": "app/static/legacy/the_civil_war.png"
+  },
+  "7917d363-5abe-44f4-ba80-79ef0778ffc8": {
+    "name": "Bird's Anger",
+    "front": "app/static/legacy/bird_anger.png",
+    "back": "app/static/legacy/bird_anger.png"
+  },
+  "20f52245-30d1-452a-a77b-59ef755b5e9e": {
+    "name": "The Brawler",
+    "front": "app/static/legacy/the_brawler.png",
+    "back": "app/static/legacy/the_brawler.png"
+  },
+  "bdfcd970-dcd4-4b95-8a91-6593637670ab": {
+    "name": "The Deathstare",
+    "front": "app/static/legacy/the_deathstare.png",
+    "back": "app/static/legacy/the_deathstare.png"
+  },
+  "1c4d5436-6375-495e-9558-e512e26b0bfe": {
+    "name": "Locked Up",
+    "front": "app/static/legacy/locked_up.png",
+    "back": "app/static/legacy/locked_up.png"
+  },
+  "a7620f3c-41d1-44ea-86f5-b7f8f00fb985": {
+    "name": "Free Deathmatch",
+    "front": "app/static/legacy/free_deathmatch.png",
+    "back": "app/static/legacy/free_deathmatch.png"
+  },
+  "76ce861a-27e9-44a1-a493-e49b750e518a": {
+    "name": "The Dark Side",
+    "front": "app/static/legacy/the_dark_side.png",
+    "back": "app/static/legacy/the_dark_side.png"
   },
   "a4319574-daaa-4417-89ac-60fb5ed88178": {
     "name": "Empowerment",
-    "front": "app/static/empowerment_front.png",
-    "back": "app/static/empowerment_back.png"
+    "front": "app/static/hm/empowerment_front.png",
+    "back": "app/static/hm/empowerment_back.png"
+  },
+  "74d8a790-9661-4b3a-86df-c2ec4ad2ae1f": {
+    "name": "1st Witness",
+    "front": "app/static/hm/1st_witness_front.png",
+    "back": "app/static/hm/1st_witness_back.png"
+  },
+  "4675a851-b8dc-493c-b069-d14f422d09e5": {
+    "name": "Serenity's Surge",
+    "front": "app/static/hm/serenity_surge_front.png",
+    "back": "app/static/hm/serenity_surge_back.png"
+  },
+  "31df7265-69d3-42e2-9ac8-271331e13bb3": {
+    "name": "Graceful Resurrection",
+    "front": "app/static/hm/graceful_resurrection_front.png",
+    "back": "app/static/hm/graceful_resurrection_back.png"
+  },
+  "a1a92042-8b2d-401a-8014-5ce8699ae365": {
+    "name": "Graceful Destruction",
+    "front": "app/static/hm/graceful_destruction_front.png",
+    "back": "app/static/hm/graceful_destruction_back.png"
   }
 }
