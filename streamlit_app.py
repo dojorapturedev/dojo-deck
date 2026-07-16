@@ -216,7 +216,7 @@ if username:
                     user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), RARITY_ORDER.get(x["rarity"], 99), x["num"]))
 
                 elif sort_option == "Rarity (Low to High)":
-                    user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), -RARITY_ORDER.get(x["rarity"], 99), x["num"])
+                    user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), -RARITY_ORDER.get(x["rarity"], 99), x["num"]))
 
                 for card in user_inventory:
                     cid = str(card['card_id'])
