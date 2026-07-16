@@ -1,66 +1,226 @@
-import altair as alt
-import pandas as pd
 import streamlit as st
-
-# Show the page title and description.
-st.set_page_config(page_title="Movies dataset", page_icon="🎬")
-st.title("🎬 Movies dataset")
-st.write(
-    """
-    This app visualizes data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
-    It shows which movie genre performed best at the box office over the years. Just 
-    click on the widgets below to explore!
-    """
-)
+import requests
+import json
+import os
+from pathlib import Path
+from supabase import create_client, Client
 
 
-# Load the data from a CSV. We're caching this so it doesn't reload every time the app
-# reruns (e.g. if the user interacts with the widgets).
+
+script_dir = Path(__file__).parent
+# All Card Data
+
+giturl = str(script_dir / "cards.json")
+
+
+# Cache the data
 @st.cache_data
-def load_data():
-    df = pd.read_csv("data/movies_genres_summary.csv")
-    return df
+def load_master_cards(url):
+    with open(url, "r", encoding="utf-8") as file:
+        data = json.load(file)
+    # response = requests.get(url)
+    return data
+
+# Load Cards
+try:
+    ALL_CARDS = load_master_cards(giturl)
+except Exception as e:
+    st.error("Failed to load card info from git")
+    ALL_CARDS = {}
 
 
-df = load_data()
+# 2. Build the CSS styles (Notice the new '.binder-row' class to align them)
+html_content = """
+<style>
+.binder-row {
+  display: flex;
+  flex-wrap: wrap;         /* Allows cards to wrap to the next line if the screen is too small */
+  gap: 20px;               /* Space between your cards */
+  justify-content: center; /* Centers the row of cards on the page */
+  padding: 20px;
+}
 
-# Show a multiselect widget with the genres using `st.multiselect`.
-genres = st.multiselect(
-    "Genres",
-    df.genre.unique(),
-    ["Action", "Adventure", "Biography", "Comedy", "Drama", "Horror"],
-)
+.flip-card {
+  background-color: transparent;
+  width: 200px;            /* Slimmed down slightly to fit a row better */
+  height: 280px;
+  perspective: 1000px;
+}
 
-# Show a slider widget with the years using `st.slider`.
-years = st.slider("Years", 1986, 2006, (2000, 2016))
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
 
-# Filter the dataframe based on the widget input and reshape it.
-df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
-df_reshaped = df_filtered.pivot_table(
-    index="year", columns="genre", values="gross", aggfunc="sum", fill_value=0
-)
-df_reshaped = df_reshaped.sort_values(by="year", ascending=False)
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img, .flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
 
 
-# Display the data as a table using `st.dataframe`.
-st.dataframe(
-    df_reshaped,
-    use_container_width=True,
-    column_config={"year": st.column_config.TextColumn("Year")},
-)
+/* 1. Hide the tracking checkbox completely */
+.card-trigger {
+  display: none;
+}
 
-# Display the data as an Altair chart using `st.altair_chart`.
-df_chart = pd.melt(
-    df_reshaped.reset_index(), id_vars="year", var_name="genre", value_name="gross"
-)
-chart = (
-    alt.Chart(df_chart)
-    .mark_line()
-    .encode(
-        x=alt.X("year:N", title="Year"),
-        y=alt.Y("gross:Q", title="Gross earnings ($)"),
-        color="genre:N",
-    )
-    .properties(height=320)
-)
-st.altair_chart(chart, use_container_width=True)
+/* FIX: Force the label container to behave like a standard grid block item */
+.card-container {
+  display: block; 
+  cursor: pointer;
+  width: 200px;  /* Matches your card width exactly */
+  height: 280px; /* Matches your card height exactly */
+  position: relative;
+}
+
+/* FORCE ENTIRE PARENT WRAPPER TO THE ABSOLUTE FOREGROUND WHEN CHECKED */
+.card-trigger:checked + .card-container {
+  position: relative;
+  z-index: 999999; /* Higher than all other cards combined */
+}
+
+/* 3. The Backdrop overlay - FIXED to fill the screen */
+.card-container::before {
+  content: "";
+  position: fixed;
+  
+  /* Force positioning relative to the screen viewport, not the card slot */
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  
+  background: rgba(0, 0, 0, 0.85); 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 99999; 
+}
+
+/* 4. Activate the backdrop overlay */
+.card-trigger:checked + .card-container::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 5. FIX: Absolute viewport targeting to force perfect centering */
+.card-trigger:checked + .card-container .flip-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Magic trick: combined with fixed 0 coordinates, this centers perfectly */
+  width: 300px;  /* Blown up size dimensions */
+  height: 420px;
+  transform: scale(1.3); 
+  z-index: 100000;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.flip-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, width 0.4s ease, height 0.4s ease;
+}
+
+</style>
+
+<div class="binder-row">
+"""
+
+
+# 3. Initialize Supabase
+url: str = os.environ.get("SUPABASE_RIGHT")
+key: str = os.environ.get("SUPABASE_CARDS")
+supabase: Client = create_client(url, key)
+
+st.title("🎴 Digital Card Binder")
+
+# 2 Authenticate User
+username = st.text_input("Enter Twitch Username").lower().strip()
+
+if username:
+    try:
+        response = (
+            supabase.table("users")
+          .select("id, name, user_cards(Amount, cards(id, name, rarity))")
+          .eq("name", username)
+          .execute()
+        )
+
+        if response.data:
+            user_data = response.data[0]
+            st.success(f"Found binder for {user_data['name']}!")
+
+            raw_inventory = user_data.get("user_cards", [])
+
+            if raw_inventory:
+                st.markdown("### Your Collection:")
+
+                user_inventory = []
+                for item in raw_inventory:
+                    card_info = item["cards"]
+                    user_inventory.append({
+                        "card_id": card_info["id"],
+                        "name": card_info["name"],
+                        "rarity": card_info["rarity"],
+                        "amount": item["Amount"]
+                    })
+
+                for card in user_inventory:
+                    cid = str(card['card_id'])
+
+                    if cid in ALL_CARDS:
+                        html_content += f"""
+<input type="checkbox" id="zoom-{cid}" class="card-trigger">
+<label for="zoom-{cid}" class="card-container">                        
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="{ALL_CARDS[cid]['front']}" alt="Card {ALL_CARDS[cid]['name']} Front">
+</div>
+<div class="flip-card-back">
+<img src="{ALL_CARDS[cid]['back']}" alt="Card {ALL_CARDS[cid]['name']} Back">
+</div>
+</div>
+</div>
+</label>
+"""
+
+                # 4. Close the binder-row div
+                html_content += "</div>"
+
+                # 5. Render everything with a single Streamlit call
+                st.markdown(html_content, unsafe_allow_html=True)
+            else:
+                st.info("You don't own any cards yet!")
+        else:
+            st.error(f"User {username} not found in database")
+    except Exception as e:
+        st.error(f"An error occured while fetching data: {e}")
+
+
+# # Injecting the 3D flipping styling
+# st.markdown(
+#     """
