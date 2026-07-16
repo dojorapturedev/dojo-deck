@@ -1,0 +1,27 @@
+{
+  "4675a851-b8dc-493c-b069-d14f422d09e5": {
+    "name": "Serenity Surge",
+    "front": "app/static/serenity_surge_front.png",
+    "back": "app/static/serenity_surge_back.png"
+  },
+  "31df7265-69d3-42e2-9ac8-271331e13bb3": {
+    "name": "Graceful Resurrection",
+    "front": "app/static/graceful_resurrection_front.png",
+    "back": "app/static/graceful_resurrection_back.png"
+  },
+  "a1a92042-8b2d-401a-8014-5ce8699ae365": {
+    "name": "Graceful Destruction",
+    "front": "app/static/graceful_destruction_front.png",
+    "back": "app/static/graceful_destruction_back.png"
+  },
+  "74d8a790-9661-4b3a-86df-c2ec4ad2ae1f": {
+    "name": "1st Witness",
+    "front": "app/static/1st_witness_front.png",
+    "back": "app/static/1st_witness_back.png"
+  },
+  "a4319574-daaa-4417-89ac-60fb5ed88178": {
+    "name": "Empowerment",
+    "front": "app/static/empowerment_front.png",
+    "back": "app/static/empowerment_back.png"
+  }
+}
