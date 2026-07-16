@@ -185,8 +185,22 @@ if username:
                         "card_id": card_info["id"],
                         "name": card_info["name"],
                         "rarity": card_info["rarity"],
+                        "num": card_info["card_num"],
                         "amount": item["Amount"]
                     })
+
+                sort_option = st.selectbox(
+                    "Sort Binder By:",
+                    options=["Default (Release Order)","Rarity (High to Low)", "Rarity (Low to High)"]
+                )
+
+                user_inventory.sort(key=lambda x: x["num"])
+
+                if sort_option == "Rarity (High to Low)":
+                    user_inventory.sort(key=lambda x:RARITY_ORDER.get(x["rarity"], 99))
+
+                elif sort_option == "Rarity (Low to High)":
+                    user_inventory.sort(key=lambda x:RARITY_ORDER.get(x["rarity"], 99), reverse=True)
 
                 for card in user_inventory:
                     cid = str(card['card_id'])
