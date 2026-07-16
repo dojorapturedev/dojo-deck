@@ -160,6 +160,30 @@ html_content = """
   transition: transform 0.4s ease, box-shadow 0.4s ease, width 0.4s ease, height 0.4s ease;
 }
 
+/* 🔥 COOL PREMIUM QUANTITY BADGE DESIGN 🔥 */
+.card-count-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Vivid Gamer Red Gradient */
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 75, 43, 0.6), 0 4px 6px rgba(0,0,0,0.4);
+    border: 2px solid #ffffff;
+    z-index: 10; /* Ensures badge floats over cards */
+    pointer-events: none; /* Stops it blocking standard clicks */
+    transition: all 0.4s ease;
+}
+
 </style>
 
 <div class="binder-row">
