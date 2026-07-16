@@ -28,6 +28,14 @@ except Exception as e:
     st.error("Failed to load card info from git")
     ALL_CARDS = {}
 
+RARITY_ORDER = {
+    "Limited Edition": 0,
+    "Legendary": 1,
+    "Epic": 2,
+    "Rare": 3,
+    "Uncommon": 4,
+    "Common": 5
+}
 
 # 2. Build the CSS styles (Notice the new '.binder-row' class to align them)
 html_content = """
@@ -164,7 +172,7 @@ if username:
     try:
         response = (
             supabase.table("users")
-          .select("id, name, user_cards(Amount, cards(id, name, rarity))")
+          .select("id, name, user_cards(Amount, cards(id, name, rarity, pack, card_num))")
           .eq("name", username)
           .execute()
         )
