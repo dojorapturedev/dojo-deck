@@ -151,7 +151,7 @@ html_content = """
   margin: auto; /* Magic trick: combined with fixed 0 coordinates, this centers perfectly */
   width: 300px;  /* Blown up size dimensions */
   height: 420px;
-  transform: scale(1.3); 
+  transform: scale(1.8); 
   z-index: 100000;
   box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 }
