@@ -26,8 +26,8 @@
   },
   "833e3588-be65-44c9-9fca-31c02a594cba": {
     "name": "Geno's Pearly Gates",
-    "front": "app/static/legacy/hm/geno_pearly_gates.png",
-    "back": "app/static/legacy/hm/geno_pearly_gates.png"
+    "front": "app/static/legacy/geno_pearly_gates.png",
+    "back": "app/static/legacy/geno_pearly_gates.png"
   },
   "1eaa0703-a977-4071-bf84-1de2c78cd008": {
     "name": "Jasmine's Judgement",
