@@ -246,12 +246,15 @@ if username:
 
                 for card in user_inventory:
                     cid = str(card['card_id'])
+                    amount = card['amount']
 
                     if cid in ALL_CARDS:
                         html_content += f"""
 <input type="checkbox" id="zoom-{cid}" class="card-trigger">
 <label for="zoom-{cid}" class="card-container">                        
 <div class="flip-card">
+<!-- Dnymaic Counter Badge -->
+<div class="{badge_class}">x{amount}</div>
 <div class="flip-card-inner">
 <div class="flip-card-front">
 <img src="{ALL_CARDS[cid]['front']}" alt="Card {ALL_CARDS[cid]['name']} Front">
