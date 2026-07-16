@@ -163,7 +163,7 @@ html_content = """
 /* 🔥 COOL PREMIUM QUANTITY BADGE DESIGN 🔥 */
 .card-count-badge {
     position: absolute;
-    top: -10px;
+    bottom: -10px;
     right: -10px;
     background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Vivid Gamer Red Gradient */
     color: white;
@@ -177,7 +177,7 @@ html_content = """
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(255, 75, 43, 0.6), 0 4px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(245, 175, 25, 0.8), 0 4px 6px rgba(0,0,0,0.4);
     border: 2px solid #ffffff;
     z-index: 10; /* Ensures badge floats over cards */
     pointer-events: none; /* Stops it blocking standard clicks */
