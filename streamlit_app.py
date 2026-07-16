@@ -248,6 +248,9 @@ if username:
                     cid = str(card['card_id'])
                     amount = card['amount']
 
+
+                    badge_class = "card-count-badge"
+                    
                     if cid in ALL_CARDS:
                         html_content += f"""
 <input type="checkbox" id="zoom-{cid}" class="card-trigger">
