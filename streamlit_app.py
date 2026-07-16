@@ -209,8 +209,8 @@ if username:
                     options=["Default (Release Order)","Rarity (High to Low)", "Rarity (Low to High)"]
                 )
 
-                if sort_option == "Default (Pack & Card Number)":
-                    user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), x["num"])
+                if sort_option == "Default (Release Order)":
+                    user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), x["num"]))
 
                 elif sort_option == "Rarity (High to Low)":
                     user_inventory.sort(key=lambda x: (get_pack_order(x["pack"]), RARITY_ORDER.get(x["rarity"], 99), x["num"]))
